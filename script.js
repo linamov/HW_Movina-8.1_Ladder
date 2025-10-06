@@ -1,25 +1,26 @@
 let ladder = {
-    step: 0,
-    
-    up() {
-        this.step++;
-        alert(`Step: ${this.step}`);
-        return this;
-    },
-    
-    down() {
-        this.step--;
-        alert(`Step: ${this.step}`);
-        return this;
-    },
-    
-    showStep() {
-        alert(`Step: ${this.step}`);
-        return this;
-    }
+  step: 0,
+
+  up: () => {
+    ladder.step++;
+    return ladder;
+  },
+
+  down: () => {
+    ladder.step--;
+    return ladder;
+  },
+
+  showStep: () => {
+    console.log(`Step: ${ladder.step}`);
+    return ladder;
+  }
 };
 
-// Example usage
-alert("Starting ladder!");
+// Демонстрація
+console.log("Starting ladder...");
 
-ladder.up().up().down().showStep();
+
+ladder.up().up().down().showStep(); 
+ladder.up().showStep();             
+ladder.down().down().showStep();     
